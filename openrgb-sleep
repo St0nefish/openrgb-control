@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# first arg is pre/post for pre-sleep or post-sleep
+case "$1" in
+    pre)
+      # call python script to turn off lights pre-sleep
+      # un-comment to enable
+      #/usr/bin/python3 /opt/openrgb-control/set-profile off
+      ;;
+    post)
+        # call python script to set profile to default on wake
+        /usr/bin/python3 /opt/openrgb-control/set-profile default
+        ;;
+esac
+
+
