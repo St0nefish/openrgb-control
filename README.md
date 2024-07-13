@@ -16,5 +16,5 @@ script to place in /usr/lib/systemd/system-sleep/ to set a profile on wake-from-
 edit this to change the on-wake profile name or add support for setting profile pre-sleep
 
 ### setup.sh
-script to copy openrgb-wake to /usr/lib/systemd/system-sleep/openrgb
+script to copy openrgb-sleep to /usr/lib/systemd/system-sleep/openrgb
 
