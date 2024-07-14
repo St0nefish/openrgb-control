@@ -1,16 +1,20 @@
 #!/bin/sh
 
+# global config directory
+OPENRGB_CONFIG=/etc/openrgb
+OPENRGB_PROFILE_SLEEP=off
+OPENRGB_PROFILE_WAKE=default
+
 # first arg is pre/post for pre-sleep or post-sleep
 case "$1" in
-    pre)
-      # call python script to turn off lights pre-sleep
-      # un-comment to enable
-      #/usr/bin/python3 /opt/openrgb-control/set-profile off
-      ;;
-    post)
-        # call python script to set profile to default on wake
-        /usr/bin/python3 /opt/openrgb-control/set-profile default
-        ;;
+  pre)
+    # call openrgb command to set profile prior to sleep
+    # un-comment to enable
+    openrgb --config $OPENRGB_CONFIG --profile $OPENRGB_PROFILE_SLEEP
+    ;;
+  post)
+    # call openrgb command to set profile on wake
+    openrgb --config $OPENRGB_CONFIG --profile $OPENRGB_PROFILE_WAKE
+    ;;
 esac
-
 
