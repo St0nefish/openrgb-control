@@ -2,7 +2,7 @@
 
 # global config directory
 OPENRGB_CONFIG=/etc/openrgb
-OPENRGB_PROFILE_SLEEP=off
+OPENRGB_PROFILE_SLEEP=sleep
 OPENRGB_PROFILE_WAKE=default
 
 # first arg is pre/post for pre-sleep or post-sleep
